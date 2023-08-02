@@ -129,3 +129,260 @@ db.Alquiler.insertMany([{
     Costo_Total:225.00,
     Estado:"Disponible"
 }]);
+
+use("db_campus_alquiler")
+db.createCollection("Reserva")
+db.Reserva.insertMany([
+{
+    _id:1,
+    Cliente_id:2,
+    Automovil_id:1,
+    Fecha_Reserva:"2023-07-06",
+    Fecha_Inicio:"2023-07-10",
+    Fecha_Fin:"2023-07-15",
+    Estado:"Pendiente"
+},
+{
+    _id:2,
+    Cliente_id:3,
+    Automovil_id:3,
+    Fecha_Reserva:"2023-07-07",
+    Fecha_Inicio:"2023-07-12",
+    Fecha_Fin:"2023-07-17",
+    Estado:"Pendiente"
+},
+{
+    _id:3,
+    Cliente_id:4,
+    Automovil_id:2,
+    Fecha_Reserva:"2023-07-07",
+    Fecha_Inicio:"2023-07-12",
+    Fecha_Fin:"2023-07-17",
+    Estado:"Pendiente"
+},
+{
+    _id:4,
+    Cliente_id:5,
+    Automovil_id:4,
+    Fecha_Reserva:"2023-07-09",
+    Fecha_Inicio:"2023-07-15",
+    Fecha_Fin:"2023-07-20",
+    Estado:"Pendiente"
+},
+{
+    _id:5,
+    Cliente_id:1,
+    Automovil_id:5,
+    Fecha_Reserva:"2023-07-10",
+    Fecha_Inicio:"2023-07-16",
+    Fecha_Fin:"2023-07-21",
+    Estado:"Pendiente"
+}]);
+
+use("db_campus_alquiler");
+db.createCollection("Sucursal");
+db.Sucursal.insertMany([
+{
+    _id:1,
+    Nombre:"Sucursal A",
+    Direccion:"Calle Principal 123",
+    Telefono:"1111111111"
+},
+{
+    _id:2,
+    Nombre:"Sucursal B",
+    Direccion:"Avenida Central 456",
+    Telefono:"2222222222"
+},
+{
+    _id:3,
+    Nombre:"Sucursal C",
+    Direccion:"Plaza Principal 789",
+    Telefono:"3333333333"
+},
+{
+    _id:4,
+    Nombre:"Sucursal D",
+    Direccion:"Ruta Secundaria 101",
+    Telefono:"4444444444"
+},
+{
+    _id:5,
+    Nombre:"Sucursal E",
+    Direccion:"Carretera Principal 987",
+    Telefono:"5555555555"
+}]);
+
+use("db_campus_alquiler");
+db.createCollection("Sucursal_Automovil");
+db.Sucursal_Automovil.insertMany([
+{
+    Sucursal_id:1,
+    Automovil_id:1,
+    Cantidad_Disponible:3,
+},
+{
+    Sucursal_id:2,
+    Automovil_id:2,
+    Cantidad_Disponible:5,
+},
+{
+    Sucursal_id:3,
+    Automovil_id:3,
+    Cantidad_Disponible:2,
+},
+{
+    Sucursal_id:4,
+    Automovil_id:4,
+    Cantidad_Disponible:4,
+},
+{
+    Sucursal_id:5,
+    Automovil_id:5,
+    Cantidad_Disponible:1,
+}]);
+
+use("db_campus_alquiler");
+db.createCollection("Empleado");
+db.Empleado.insertMany([
+{
+    _id:1,
+    Nombre:"Ana",
+    Apellido:"Gomez",
+    DNI:"123456789",
+    Direccion:"Calle 111",
+    Telefono:"1111111111",
+    Cargo:"Gerente"
+},
+{
+    _id:2,
+    Nombre:"Luis",
+    Apellido:"Rodriguez",
+    DNI:"987654321",
+    Direccion:"Avenida 222",
+    Telefono:"2222222222",
+    Cargo:"Asistente"
+},
+{
+    _id:3,
+    Nombre:"Elena",
+    Apellido:"Fernandez",
+    DNI:"456789012",
+    Direccion:"Plaza 333",
+    Telefono:"3333333333",
+    Cargo:"Vendedor"
+},
+{
+    _id:4,
+    Nombre:"Mario",
+    Apellido:"Torres",
+    DNI:"210987654",
+    Direccion:"Ruta 444",
+    Telefono:"4444444444",
+    Cargo:"Recepcionista"
+},
+{
+    _id:5,
+    Nombre:"Carlos",
+    Apellido:"Hernandez",
+    DNI:"543210987",
+    Direccion:"Carretera 555",
+    Telefono:"5555555555",
+    Cargo:"Chofer"
+}]);
+
+use("db_campus_alquiler");
+db.createCollection("Registro_Entrega")
+db.Registro_Entrega.insertMany([
+{
+    Registro_id:1,
+    Alquiler_id:1,
+    Empleado_id:3, 
+    Fecha_Entrega:"2023-07-05",
+    Combustible_Entregado:40.00,
+    Kilometraje_Entregado:2000,
+},
+{
+    Registro_id:2,
+    Alquiler_id:2,
+    Empleado_id:4, 
+    Fecha_Entrega:"2023-07-07",
+    Combustible_Entregado:30.00,
+    Kilometraje_Entregado:1800,
+},
+{
+    Registro_id:3,
+    Alquiler_id:3,
+    Empleado_id:1, 
+    Fecha_Entrega:"2023-07-06",
+    Combustible_Entregado:45.00,
+    Kilometraje_Entregado:2200,
+},
+{
+    Registro_id:4,
+    Alquiler_id:4,
+    Empleado_id:5, 
+    Fecha_Entrega:"2023-07-08",
+    Combustible_Entregado:50.00,
+    Kilometraje_Entregado:2400,
+},
+{
+    Registro_id:5,
+    Alquiler_id:5,
+    Empleado_id:2, 
+    Fecha_Entrega:"2023-07-09",
+    Combustible_Entregado:35.00,
+    Kilometraje_Entregado:1900,
+},
+
+])
+
+use("db_campus_alquiler");
+db.createCollection("Registro_Devolucion");
+db.Registro_Devolucion.insertMany([
+{
+    Registro_id:1,
+    Alquiler_id:1,
+    Empleado_id:3,
+    Fecha_Devolucion:'2023-07-10',
+    Combustible_Devuelto:10.00,
+    Kilometraje_Devuelto:2500,
+    Monto_Adicional:20.00,
+},
+{
+    Registro_id:2,
+    Alquiler_id:2,
+    Empleado_id:4,
+    Fecha_Devolucion:'2023-07-12',
+    Combustible_Devuelto:15.00,
+    Kilometraje_Devuelto:2100,
+    Monto_Adicional:15.00,
+},
+{
+    Registro_id:3,
+    Alquiler_id:3,
+    Empleado_id:1,
+    Fecha_Devolucion:'2023-07-11',
+    Combustible_Devuelto:20.00,
+    Kilometraje_Devuelto:2300,
+    Monto_Adicional:25.00,
+},
+{
+    Registro_id:4,
+    Alquiler_id:4,
+    Empleado_id:5,
+    Fecha_Devolucion:'2023-07-13',
+    Combustible_Devuelto:25.00,
+    Kilometraje_Devuelto:2600,
+    Monto_Adicional:30.00,
+},
+{
+    Registro_id:5,
+    Alquiler_id:5,
+    Empleado_id:2,
+    Fecha_Devolucion:'2023-07-14',
+    Combustible_Devuelto:18.00,
+    Kilometraje_Devuelto:2000,
+    Monto_Adicional:12.00,
+},
+])
