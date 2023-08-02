@@ -1,7 +1,7 @@
 use("db_campus_alquiler");
 db.createCollection("Cliente");
 db.Cliente.insertMany([{
-    _id:1,
+    ID:1,
     Nombre:"Juan",
     Apellido:"Perez",
     DNI:"12345678",
@@ -9,7 +9,7 @@ db.Cliente.insertMany([{
     Telefono:"11111111",
     Email:"juan@example.com"
 },{    
-    _id:2,
+    ID:2,
     Nombre:"Maria",
     Apellido:"Lopez",
     DNI:"87654321",
@@ -17,7 +17,7 @@ db.Cliente.insertMany([{
     Telefono:"22222222",
     Email:"maria@example.com"
 },{
-    _id:3,
+    ID:3,
     Nombre:"Pedro",
     Apellido:"Gonzalez",
     DNI:"56789012",
@@ -25,7 +25,7 @@ db.Cliente.insertMany([{
     Telefono:"33333333",
     Email:"pedro@example.com" 
 },{
-    _id:4,
+    ID:4,
     Nombre:"Laura",
     Apellido:"Martinez",
     DNI:"09876543",
@@ -33,7 +33,7 @@ db.Cliente.insertMany([{
     Telefono:"44444444",
     Email:"laura@example.com" 
 },{
-    _id:5,
+    ID:5,
     Nombre:"Carlos",
     Apellido:"Gomez",
     DNI:"43210987",
@@ -45,7 +45,7 @@ db.Cliente.insertMany([{
 use("db_campus_alquiler");
 db.createCollection("Automovil");
 db.Automovil.insertMany([{
-    _id:1,
+    ID:1,
     Marca:"Toyota",
     Modelo:"Corolla",
     Anio:2021,
@@ -53,7 +53,7 @@ db.Automovil.insertMany([{
     Capacidad:5,
     Precio_Diario:50.00
 },{
-    _id:2,
+    ID:2,
     Marca:"Honda",
     Modelo:"Civic",
     Anio:2020,
@@ -61,7 +61,7 @@ db.Automovil.insertMany([{
     Capacidad:5,
     Precio_Diario:45.00
 },{
-    _id:3,
+    ID:3,
     Marca:"Ford",
     Modelo:"Explorer",
     Anio:2019,
@@ -69,7 +69,7 @@ db.Automovil.insertMany([{
     Capacidad:7,
     Precio_Diario:60.00
 },{
-    _id:4,
+    ID:4,
     Marca:"Chevrolet",
     Modelo:"Equinox",
     Anio:2022,
@@ -77,7 +77,7 @@ db.Automovil.insertMany([{
     Capacidad:5,
     Precio_Diario:55.00
 },{
-    _id:5,
+    ID:5,
     Marca:"Nissan",
     Modelo:"Sentra",
     Anio:2022,
@@ -89,41 +89,41 @@ db.Automovil.insertMany([{
 use("db_campus_alquiler");
 db.createCollection("Alquiler");
 db.Alquiler.insertMany([{
-    _id:1,
-    Cliente_id:1,
-    Automovil_id:3,
+    ID:1,
+    Cliente_ID:1,
+    Automovil_ID:3,
     Fecha_Inicio:"2023-07-01",
     Fecha_Fin:"2023-07-05",
     Costo_Total:240.00,
     Estado:"Activo"
 },{
-    _id:2,
-    Cliente_id:2,
-    Automovil_id:4,
+    ID:2,
+    Cliente_ID:2,
+    Automovil_ID:4,
     Fecha_Inicio:"2023-07-02",
     Fecha_Fin:"2023-07-07",
     Costo_Total:275.00,
     Estado:"Disponible"
 },{
-    _id:3,
-    Cliente_id:3,
-    Automovil_id:1,
+    ID:3,
+    Cliente_ID:3,
+    Automovil_ID:1,
     Fecha_Inicio:"2023-07-03",
     Fecha_Fin:"2023-07-06",
     Costo_Total:150.00,
     Estado:"Activo"
 },{
-    _id:4,
-    Cliente_id:4,
-    Automovil_id:5,
+    ID:4,
+    Cliente_ID:4,
+    Automovil_ID:5,
     Fecha_Inicio:"2023-07-04",
     Fecha_Fin:"2023-07-08",
     Costo_Total:192.00,
     Estado:"Activo"
 },{
-    _id:5,
-    Cliente_id:5,
-    Automovil_id:2,
+    ID:5,
+    Cliente_ID:5,
+    Automovil_ID:2,
     Fecha_Inicio:"2023-07-05",
     Fecha_Fin:"2023-07-09",
     Costo_Total:225.00,
@@ -134,45 +134,45 @@ use("db_campus_alquiler")
 db.createCollection("Reserva")
 db.Reserva.insertMany([
 {
-    _id:1,
-    Cliente_id:2,
-    Automovil_id:1,
+    ID:1,
+    Cliente_ID:2,
+    Automovil_ID:1,
     Fecha_Reserva:"2023-07-06",
     Fecha_Inicio:"2023-07-10",
     Fecha_Fin:"2023-07-15",
     Estado:"Pendiente"
 },
 {
-    _id:2,
-    Cliente_id:3,
-    Automovil_id:3,
+    ID:2,
+    Cliente_ID:3,
+    Automovil_ID:3,
     Fecha_Reserva:"2023-07-07",
     Fecha_Inicio:"2023-07-12",
     Fecha_Fin:"2023-07-17",
     Estado:"Pendiente"
 },
 {
-    _id:3,
-    Cliente_id:4,
-    Automovil_id:2,
+    ID:3,
+    Cliente_ID:4,
+    Automovil_ID:2,
     Fecha_Reserva:"2023-07-07",
     Fecha_Inicio:"2023-07-12",
     Fecha_Fin:"2023-07-17",
     Estado:"Pendiente"
 },
 {
-    _id:4,
-    Cliente_id:5,
-    Automovil_id:4,
+    ID:4,
+    Cliente_ID:5,
+    Automovil_ID:4,
     Fecha_Reserva:"2023-07-09",
     Fecha_Inicio:"2023-07-15",
     Fecha_Fin:"2023-07-20",
     Estado:"Pendiente"
 },
 {
-    _id:5,
-    Cliente_id:1,
-    Automovil_id:5,
+    ID:5,
+    Cliente_ID:1,
+    Automovil_ID:5,
     Fecha_Reserva:"2023-07-10",
     Fecha_Inicio:"2023-07-16",
     Fecha_Fin:"2023-07-21",
@@ -183,31 +183,31 @@ use("db_campus_alquiler");
 db.createCollection("Sucursal");
 db.Sucursal.insertMany([
 {
-    _id:1,
+    ID:1,
     Nombre:"Sucursal A",
     Direccion:"Calle Principal 123",
     Telefono:"1111111111"
 },
 {
-    _id:2,
+    ID:2,
     Nombre:"Sucursal B",
     Direccion:"Avenida Central 456",
     Telefono:"2222222222"
 },
 {
-    _id:3,
+    ID:3,
     Nombre:"Sucursal C",
     Direccion:"Plaza Principal 789",
     Telefono:"3333333333"
 },
 {
-    _id:4,
+    ID:4,
     Nombre:"Sucursal D",
     Direccion:"Ruta Secundaria 101",
     Telefono:"4444444444"
 },
 {
-    _id:5,
+    ID:5,
     Nombre:"Sucursal E",
     Direccion:"Carretera Principal 987",
     Telefono:"5555555555"
@@ -217,28 +217,28 @@ use("db_campus_alquiler");
 db.createCollection("Sucursal_Automovil");
 db.Sucursal_Automovil.insertMany([
 {
-    Sucursal_id:1,
-    Automovil_id:1,
+    Sucursal_ID:1,
+    Automovil_ID:1,
     Cantidad_Disponible:3,
 },
 {
-    Sucursal_id:2,
-    Automovil_id:2,
+    Sucursal_ID:2,
+    Automovil_ID:2,
     Cantidad_Disponible:5,
 },
 {
-    Sucursal_id:3,
-    Automovil_id:3,
+    Sucursal_ID:3,
+    Automovil_ID:3,
     Cantidad_Disponible:2,
 },
 {
-    Sucursal_id:4,
-    Automovil_id:4,
+    Sucursal_ID:4,
+    Automovil_ID:4,
     Cantidad_Disponible:4,
 },
 {
-    Sucursal_id:5,
-    Automovil_id:5,
+    Sucursal_ID:5,
+    Automovil_ID:5,
     Cantidad_Disponible:1,
 }]);
 
@@ -246,7 +246,7 @@ use("db_campus_alquiler");
 db.createCollection("Empleado");
 db.Empleado.insertMany([
 {
-    _id:1,
+    ID:1,
     Nombre:"Ana",
     Apellido:"Gomez",
     DNI:"123456789",
@@ -255,7 +255,7 @@ db.Empleado.insertMany([
     Cargo:"Gerente"
 },
 {
-    _id:2,
+    ID:2,
     Nombre:"Luis",
     Apellido:"Rodriguez",
     DNI:"987654321",
@@ -264,7 +264,7 @@ db.Empleado.insertMany([
     Cargo:"Asistente"
 },
 {
-    _id:3,
+    ID:3,
     Nombre:"Elena",
     Apellido:"Fernandez",
     DNI:"456789012",
@@ -273,7 +273,7 @@ db.Empleado.insertMany([
     Cargo:"Vendedor"
 },
 {
-    _id:4,
+    ID:4,
     Nombre:"Mario",
     Apellido:"Torres",
     DNI:"210987654",
@@ -282,7 +282,7 @@ db.Empleado.insertMany([
     Cargo:"Recepcionista"
 },
 {
-    _id:5,
+    ID:5,
     Nombre:"Carlos",
     Apellido:"Hernandez",
     DNI:"543210987",
@@ -295,41 +295,41 @@ use("db_campus_alquiler");
 db.createCollection("Registro_Entrega")
 db.Registro_Entrega.insertMany([
 {
-    Registro_id:1,
-    Alquiler_id:1,
-    Empleado_id:3, 
+    Registro_ID:1,
+    Alquiler_ID:1,
+    Empleado_ID:3, 
     Fecha_Entrega:"2023-07-05",
     Combustible_Entregado:40.00,
     Kilometraje_Entregado:2000,
 },
 {
-    Registro_id:2,
-    Alquiler_id:2,
-    Empleado_id:4, 
+    Registro_ID:2,
+    Alquiler_ID:2,
+    Empleado_ID:4, 
     Fecha_Entrega:"2023-07-07",
     Combustible_Entregado:30.00,
     Kilometraje_Entregado:1800,
 },
 {
-    Registro_id:3,
-    Alquiler_id:3,
-    Empleado_id:1, 
+    Registro_ID:3,
+    Alquiler_ID:3,
+    Empleado_ID:1, 
     Fecha_Entrega:"2023-07-06",
     Combustible_Entregado:45.00,
     Kilometraje_Entregado:2200,
 },
 {
-    Registro_id:4,
-    Alquiler_id:4,
-    Empleado_id:5, 
+    Registro_ID:4,
+    Alquiler_ID:4,
+    Empleado_ID:5, 
     Fecha_Entrega:"2023-07-08",
     Combustible_Entregado:50.00,
     Kilometraje_Entregado:2400,
 },
 {
-    Registro_id:5,
-    Alquiler_id:5,
-    Empleado_id:2, 
+    Registro_ID:5,
+    Alquiler_ID:5,
+    Empleado_ID:2, 
     Fecha_Entrega:"2023-07-09",
     Combustible_Entregado:35.00,
     Kilometraje_Entregado:1900,
@@ -341,48 +341,60 @@ use("db_campus_alquiler");
 db.createCollection("Registro_Devolucion");
 db.Registro_Devolucion.insertMany([
 {
-    Registro_id:1,
-    Alquiler_id:1,
-    Empleado_id:3,
+    Registro_ID:1,
+    Alquiler_ID:1,
+    Empleado_ID:3,
     Fecha_Devolucion:'2023-07-10',
     Combustible_Devuelto:10.00,
     Kilometraje_Devuelto:2500,
     Monto_Adicional:20.00,
 },
 {
-    Registro_id:2,
-    Alquiler_id:2,
-    Empleado_id:4,
+    Registro_ID:2,
+    Alquiler_ID:2,
+    Empleado_ID:4,
     Fecha_Devolucion:'2023-07-12',
     Combustible_Devuelto:15.00,
     Kilometraje_Devuelto:2100,
     Monto_Adicional:15.00,
 },
 {
-    Registro_id:3,
-    Alquiler_id:3,
-    Empleado_id:1,
+    Registro_ID:3,
+    Alquiler_ID:3,
+    Empleado_ID:1,
     Fecha_Devolucion:'2023-07-11',
     Combustible_Devuelto:20.00,
     Kilometraje_Devuelto:2300,
     Monto_Adicional:25.00,
 },
 {
-    Registro_id:4,
-    Alquiler_id:4,
-    Empleado_id:5,
+    Registro_ID:4,
+    Alquiler_ID:4,
+    Empleado_ID:5,
     Fecha_Devolucion:'2023-07-13',
     Combustible_Devuelto:25.00,
     Kilometraje_Devuelto:2600,
     Monto_Adicional:30.00,
 },
 {
-    Registro_id:5,
-    Alquiler_id:5,
-    Empleado_id:2,
+    Registro_ID:5,
+    Alquiler_ID:5,
+    Empleado_ID:2,
     Fecha_Devolucion:'2023-07-14',
     Combustible_Devuelto:18.00,
     Kilometraje_Devuelto:2000,
     Monto_Adicional:12.00,
 },
-])
+]);
+
+
+
+
+
+//Consultas
+
+//2. Listar todos los clientes
+use("db_campus_alquiler");
+db.Cliente.find();
+
+//3.
